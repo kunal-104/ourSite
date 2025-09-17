@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors - Government authority with approachable confidence */
+  --color-primary: #1f4e79; /* blue-900 */
+  --color-primary-50: #eff6ff; /* blue-50 */
+  --color-primary-100: #dbeafe; /* blue-100 */
+  --color-primary-200: #bfdbfe; /* blue-200 */
+  --color-primary-300: #93c5fd; /* blue-300 */
+  --color-primary-400: #60a5fa; /* blue-400 */
+  --color-primary-500: #3b82f6; /* blue-500 */
+  --color-primary-600: #2563eb; /* blue-600 */
+  --color-primary-700: #1d4ed8; /* blue-700 */
+  --color-primary-800: #1e40af; /* blue-800 */
+  --color-primary-900: #1f4e79; /* custom government blue */
+
+  /* Secondary Colors - National pride accent */
+  --color-secondary: #ff9933; /* orange-400 */
+  --color-secondary-50: #fff7ed; /* orange-50 */
+  --color-secondary-100: #ffedd5; /* orange-100 */
+  --color-secondary-200: #fed7aa; /* orange-200 */
+  --color-secondary-300: #fdba74; /* orange-300 */
+  --color-secondary-400: #ff9933; /* custom saffron */
+  --color-secondary-500: #f97316; /* orange-500 */
+  --color-secondary-600: #ea580c; /* orange-600 */
+  --color-secondary-700: #c2410c; /* orange-700 */
+  --color-secondary-800: #9a3412; /* orange-800 */
+  --color-secondary-900: #7c2d12; /* orange-900 */
+
+  /* Accent Colors - Success and achievement */
+  --color-accent: #138808; /* green-700 */
+  --color-accent-50: #f0fdf4; /* green-50 */
+  --color-accent-100: #dcfce7; /* green-100 */
+  --color-accent-200: #bbf7d0; /* green-200 */
+  --color-accent-300: #86efac; /* green-300 */
+  --color-accent-400: #4ade80; /* green-400 */
+  --color-accent-500: #22c55e; /* green-500 */
+  --color-accent-600: #16a34a; /* green-600 */
+  --color-accent-700: #138808; /* custom achievement green */
+  --color-accent-800: #166534; /* green-800 */
+  --color-accent-900: #14532d; /* green-900 */
+
+  /* Background Colors */
+  --color-background: #fafbfc; /* gray-50 */
+  --color-surface: #ffffff; /* white */
+
+  /* Text Colors */
+  --color-text-primary: #1a202c; /* gray-900 */
+  --color-text-secondary: #4a5568; /* gray-600 */
+
+  /* Status Colors */
+  --color-success: #38a169; /* green-600 */
+  --color-warning: #d69e2e; /* yellow-600 */
+  --color-error: #e53e3e; /* red-600 */
+
+  /* Border Colors */
+  --color-border: #e2e8f0; /* gray-200 */
+  --color-border-focus: #1f4e79; /* primary */
+
+  /* Shadow Values */
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-modal: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  /* Animation Timing */
+  --transition-fast: 200ms ease-in-out;
+  --transition-normal: 300ms ease-in-out;
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+
+  button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    transition: var(--transition-fast);
+  }
+
+  input, textarea, select {
+    font-family: 'Inter', sans-serif;
+    transition: var(--transition-normal);
+  }
+
+  input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--color-border-focus);
+    box-shadow: 0 0 0 3px rgba(31, 78, 121, 0.1);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold;
+    @apply hover:bg-primary-800 focus:ring-4 focus:ring-primary-100;
+    @apply transition-all duration-200 ease-in-out;
+    @apply shadow-sm hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white px-6 py-3 rounded-lg font-semibold;
+    @apply hover:bg-secondary-600 focus:ring-4 focus:ring-secondary-100;
+    @apply transition-all duration-200 ease-in-out;
+    @apply shadow-sm hover:shadow-md;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 border border-gray-200 rounded-lg;
+    @apply focus:border-primary focus:ring-4 focus:ring-primary-50;
+    @apply transition-all duration-300 ease-in-out;
+    @apply bg-surface text-text-primary;
+  }
+
+  .card {
+    @apply bg-surface rounded-lg shadow-sm border border-gray-100;
+    @apply p-6;
+  }
+
+  .card-elevated {
+    @apply bg-surface rounded-lg border border-gray-100;
+    box-shadow: var(--shadow-subtle);
+    @apply p-6;
+  }
+
+  .text-heading {
+    @apply text-text-primary font-semibold;
+  }
+
+  .text-body {
+    @apply text-text-primary font-normal;
+  }
+
+  .text-caption {
+    @apply text-text-secondary font-normal text-sm;
+  }
+
+  .status-success {
+    @apply text-success bg-accent-50 border border-accent-200 px-3 py-2 rounded-md;
+  }
+
+  .status-warning {
+    @apply text-warning bg-yellow-50 border border-yellow-200 px-3 py-2 rounded-md;
+  }
+
+  .status-error {
+    @apply text-error bg-red-50 border border-red-200 px-3 py-2 rounded-md;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    transition: var(--transition-normal);
+  }
+
+  .transition-fast {
+    transition: var(--transition-fast);
+  }
+
+  .shadow-government {
+    box-shadow: var(--shadow-subtle);
+  }
+
+  .shadow-modal {
+    box-shadow: var(--shadow-modal);
+  }
+}
