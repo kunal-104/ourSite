@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Management - SAI Portal | Sports Authority of India</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="min-h-screen bg-gradient-to-br from-primary-50 to-accent-50">
+
+  <!-- Header -->
+  <header class="bg-primary shadow-government">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <div class="flex items-center space-x-4">
+        <img src="../assets/images/SAI-1757662244268.jpg" alt="Emblem" class="h-10 w-10 rounded-full object-cover"/>
+        <div class="text-white">
+          <h1 class="text-lg font-semibold">SAI (KHELSETU)</h1>
+          <p class="text-xs text-primary-100">Sports Authority of India</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-primary-100">
+        <a href="help_support_center.html" class="hover:text-white">Help & Support</a>
+        <a href="security_center.html" class="hover:text-white">Security Center</a>
+        <a href="login_portal.html" class="hover:text-white">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+
+    <!-- Personal Information -->
+    <section class="card-elevated bg-surface p-6">
+      <h3 class="text-heading-md text-text-primary mb-6">Personal Information / व्यक्तिगत जानकारी</h3>
+      <form id="personalInfoForm" class="space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="form-label">Full Name</label>
+            <input type="text" name="fullName" class="form-input" placeholder="Enter your full name"/>
+          </div>
+          <div>
+            <label class="form-label">Date of Birth</label>
+            <input type="date" name="dob" class="form-input"/>
+          </div>
+          <div>
+            <label class="form-label">Email</label>
+            <input type="email" name="email" class="form-input" placeholder="Enter email"/>
+          </div>
+          <div>
+            <label class="form-label">Phone Number</label>
+            <input type="tel" name="phone" class="form-input" placeholder="+91-"/>
+          </div>
+          <div class="md:col-span-2">
+            <label class="form-label">Address</label>
+            <textarea name="address" rows="3" class="form-input"></textarea>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Sports Profile -->
+    <section class="card-elevated bg-surface p-6">
+      <h3 class="text-heading-md text-text-primary mb-6">Sports Profile / खेल प्रोफ़ाइल</h3>
+      <form id="sportsProfileForm" class="space-y-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="form-label">Sport</label>
+            <input type="text" name="sport" class="form-input" placeholder="Enter sport"/>
+          </div>
+          <div>
+            <label class="form-label">Position/Role</label>
+            <input type="text" name="role" class="form-input" placeholder="e.g. Forward, Goalkeeper"/>
+          </div>
+          <div>
+            <label class="form-label">Achievements</label>
+            <textarea name="achievements" rows="3" class="form-input"></textarea>
+          </div>
+          <div>
+            <label class="form-label">Training Center</label>
+            <input type="text" name="center" class="form-input" placeholder="Enter training center"/>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- Security Settings -->
+    <section class="card-elevated bg-surface p-6">
+      <h3 class="text-heading-md text-text-primary mb-6">Security Settings / सुरक्षा सेटिंग्स</h3>
+      <form id="securityForm" class="space-y-4">
+        <div>
+          <label class="form-label">Current Password</label>
+          <input type="password" name="currentPassword" class="form-input"/>
+        </div>
+        <div>
+          <label class="form-label">New Password</label>
+          <input type="password" name="newPassword" class="form-input"/>
+        </div>
+        <div>
+          <label class="form-label">Confirm Password</label>
+          <input type="password" name="confirmPassword" class="form-input"/>
+        </div>
+      </form>
+    </section>
+
+    <!-- Documents & Certificates -->
+    <section class="card-elevated bg-surface p-6">
+      <h3 class="text-heading-md text-text-primary mb-6">Documents & Certificates / दस्तावेज़ और प्रमाण पत्र</h3>
+      <form id="documentsForm" class="space-y-4">
+        <div>
+          <label class="form-label">Upload Aadhar</label>
+          <input type="file" name="aadhar" class="form-input"/>
+        </div>
+        <div>
+          <label class="form-label">Upload PAN</label>
+          <input type="file" name="pan" class="form-input"/>
+        </div>
+        <div>
+          <label class="form-label">Upload Sports Certificate</label>
+          <input type="file" name="certificate" class="form-input"/>
+        </div>
+      </form>
+    </section>
+
+    <!-- Privacy & Audit -->
+    <section class="card-elevated bg-surface p-6">
+      <h3 class="text-heading-md text-text-primary mb-6">Privacy & Audit / गोपनीयता और ऑडिट</h3>
+      <form id="privacyForm" class="space-y-4">
+        <div class="flex items-center space-x-2">
+          <input type="checkbox" name="shareData" id="shareData" class="form-checkbox"/>
+          <label for="shareData">Allow my data to be shared for research</label>
+        </div>
+        <div class="flex items-center space-x-2">
+          <input type="checkbox" name="auditLogs" id="auditLogs" class="form-checkbox"/>
+          <label for="auditLogs">Enable audit logs</label>
+        </div>
+      </form>
+    </section>
+
+    <!-- Common Save Button -->
+    <div class="flex justify-end mt-6 p-6">
+      <button id="saveAll" class="btn-primary hover-lift">
+        <svg class="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+        Save Personal Information
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-surface border-t border-gray-200 py-6 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+      <div class="flex space-x-6 text-body-sm text-text-secondary">
+        <a href="help_support_center.html" class="hover:text-primary">Technical Support</a>
+        <a href="help_support_center.html" class="hover:text-primary">User Guides</a>
+        <a href="security_center.html" class="hover:text-primary">Security Center</a>
+      </div>
+      <div class="text-center md:text-right text-caption text-text-secondary">
+        <p>© 2025 Sports Authority of India. All Rights Reserved.</p>
+        <p class="mt-1">Government of India | Ministry of Youth Affairs and Sports</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+<script>
+  document.getElementById('saveAll')?.addEventListener('click', function () {
+    const forms = document.querySelectorAll('form');
+    let formData = {};
+    forms.forEach(form => {
+      new FormData(form).forEach((value, key) => {
+        formData[key] = value;
+      });
+    });
+    console.log("Saving all data:", formData);
+
+    const btn = this;
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<svg class="w-5 h-5 mr-2 inline animate-spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="m4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Saving...';
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+      // Redirect to the new page instead of showing alert
+      window.location.href = 'ministry_updates.html';
+    }, 2000);
+  });
+</script>
+</body>
+</html>

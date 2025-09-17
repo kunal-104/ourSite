@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ministry Affairs & Updates - SAI Portal | Sports Authority of India</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    .khelsetu-bg {
+      background-image: url('../assets/images/khelsetu-bg.png');
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: overlay;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    .news-card {
+      transition: transform 0.3s ease;
+    }
+    .news-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    /* Popup Modal Styles */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .modal-buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .clickable-text {
+      cursor: pointer;
+      color: #0066cc;
+      text-decoration: underline;
+      margin-top: 1rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-primary-50 to-accent-50">
+
+  <!-- Header -->
+  <header class="bg-primary shadow-government">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <div class="flex items-center space-x-4">
+        <img src="../assets/images/SAI-1757662244268.jpg" alt="Emblem" class="h-10 w-10 rounded-full object-cover"/>
+        <div class="text-white">
+          <h1 class="text-lg font-semibold">SAI (KHELSETU) </h1>
+          <p class="text-xs text-primary-100">Sports Authority of India</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex space-x-6 text-primary-100">
+        <a href="help_support_center.html" class="hover:text-white">Help & Support</a>
+        <a href="security_center.html" class="hover:text-white">Security Center</a>
+        <a href="login_portal.html" class="hover:text-white">Logout</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+    
+    <!-- Page Title -->
+    <div class="text-center">
+      <h1 class="text-3xl font-bold text-primary">Ministry of Youth Affairs & Sports</h1>
+      <p class="text-text-secondary mt-2">Latest Updates and Initiatives</p>
+    </div>
+
+    <!-- Khelsetu Information Section -->
+    <section class="card-elevated bg-surface p-6 khelsetu-bg">
+      <h2 class="text-2xl font-semibold text-primary mb-4">Khelsetu Platform</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <p class="text-text-primary mb-4">
+            KhelSetu is a next-gen sports platform built to connect athletes, coaches, and selectors under one digital roof.
+It simplifies the selection process with real-time fitness tests like push-ups, sit-ups, shuttle runs, BMI, height & weight tracking.
+The app ensures fair, transparent, and data-driven evaluation for every athlete.
+With its smart design, athletes can monitor progress while selectors get instant verified results.
+KhelSetu bridges the gap between raw talent and opportunity, making sports selection faster and more accurate.
+It’s not just an app – it’s the future of digital sports recruitment in India.
+          </p>
+          <ul class="list-disc pl-5 text-text-primary space-y-2">
+            <li>Upload training or competition videos to prove your skills and shine beyond numbers.</li>
+            <li>Smart AI tracks your body movements with strong accuracy, ensuring fair performance analysis.   </li>
+            <li>No need to count – push-ups, sit-ups & more are tracked automatically with precision.</li>
+            <li>Instant data for athletes, coaches, and selectors, all in one place.</li>
+            <li>Stay motivated by monitoring growth, milestones, and fitness improvements step by step.</li>
+            <li>Connecting raw talent with the right stage so that no hard work goes unnoticed. </li>
+          </ul>
+        </div>
+      </div>
+       
+      <div class="mt-6">
+        <h2 class="clickable-text" id="startTestBtn">CLICK HERE TO START A PHYSICAL TEST WITH FOLLOW UP INSTRUCTION</h2>
+      </div>
+    </section>
+
+    <!-- Ministry Initiatives -->
+    <section class="card-elevated bg-surface p-6">
+      <h2 class="text-2xl font-semibold text-primary mb-6">Ministry Initiatives</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-primary-50 p-4 rounded-lg news-card">
+          <h3 class="text-lg font-semibold text-primary mb-2">Khelo India Scheme</h3>
+          <p class="text-text-primary">Revolutionizing sports infrastructure at grassroots level with focus on youth development.</p>
+        </div>
+        <div class="bg-primary-50 p-4 rounded-lg news-card">
+          <h3 class="text-lg font-semibold text-primary mb-2">Target Olympic Podium Scheme</h3>
+          <p class="text-text-primary">Identifying and supporting potential medal prospects for Olympic and Paralympic games.</p>
+        </div>
+        <div class="bg-primary-50 p-4 rounded-lg news-card">
+          <h3 class="text-lg font-semibold text-primary mb-2">National Sports Development Fund</h3>
+          <p class="text-text-primary">Providing financial assistance to outstanding sports persons in need of support.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Updates -->
+    <section class="card-elevated bg-surface p-6">
+      <h2 class="text-2xl font-semibold text-primary mb-6">Latest Sports Updates</h2>
+      <div class="space-y-6">
+        <div class="border-b border-gray-200 pb-4">
+          <h3 class="text-xl font-semibold text-text-primary">India Wins 10 Medals at Asian Championships</h3>
+          <p class="text-text-secondary mt-1">Indian athletes showcased exceptional performance at the recent Asian Athletics Championships.</p>
+          <p class="text-caption text-text-secondary mt-2">July 15, 2025</p>
+        </div>
+        <div class="border-b border-gray-200 pb-4">
+          <h3 class="text-xl font-semibold text-text-primary">New Sports Policy Focuses on Grassroots Development</h3>
+          <p class="text-text-secondary mt-1">The Ministry announced a new policy aiming to identify and nurture talent from rural areas.</p>
+          <p class="text-caption text-text-secondary mt-2">July 10, 2025</p>
+        </div>
+        <div class="border-b border-gray-200 pb-4">
+          <h3 class="text-xl font-semibold text-text-primary">Digital Sports Infrastructure Portal Launched</h3>
+          <p class="text-text-secondary mt-1">A new portal mapping all sports facilities across India to improve accessibility.</p>
+          <p class="text-caption text-text-secondary mt-2">July 5, 2025</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold text-text-primary">SAI Announces Scholarship for 500 Young Athletes</h3>
+          <p class="text-text-secondary mt-1">Scholarships worth ₹5 crores announced for promising athletes in Olympic disciplines.</p>
+          <p class="text-caption text-text-secondary mt-2">June 28, 2025</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Back to Profile Button -->
+    <div class="flex justify-center mt-6 p-6">
+      <button onclick="window.history.back()" class="btn-primary hover-lift">
+        <svg class="w-5 h-5 mr-2 inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+        </svg>
+        Back to Profile
+      </button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-surface border-t border-gray-200 py-6 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+      <div class="flex space-x-6 text-body-sm text-text-secondary">
+        <a href="help_support_center.html" class="hover:text-primary">Technical Support</a>
+        <a href="help_support_center.html" class="hover:text-primary">User Guides</a>
+        <a href="security_center.html" class="hover:text-primary">Security Center</a>
+      </div>
+      <div class="text-center md:text-right text-caption text-text-secondary">
+        <p>© 2025 Sports Authority of India. All Rights Reserved.</p>
+        <p class="mt-1">Government of India | Ministry of Youth Affairs and Sports</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Popup Modal -->
+  <div id="consentModal" class="modal">
+    <div class="modal-content">
+      <h3 class="text-xl font-semibold text-primary mb-4">Terms and Conditions</h3>
+      <p class="text-text-primary mb-4">
+        By proceeding with the physical test, you acknowledge that:
+      </p>
+      <ul class="list-disc pl-5 text-text-primary space-y-2 mb-4">
+        <li>You are in good physical condition to perform the tests</li>
+        <li>You understand the instructions provided</li>
+        <li>You consent to the recording and evaluation of your performance</li>
+        <li>The results will be used for selection purposes</li>
+      </ul>
+      <div class="modal-buttons">
+        <button id="cancelBtn" class="btn-secondary">Cancel</button>
+        <button id="agreeBtn" class="btn-primary">I Agree</button>
+      </div>
+    </div>
+  </div>
+
+ <script>
+  const modal = document.getElementById('consentModal');
+  const startTestBtn = document.getElementById('startTestBtn');
+  const agreeBtn = document.getElementById('agreeBtn');
+  const cancelBtn = document.getElementById('cancelBtn');
+
+  // Open modal when clicking the test link
+  startTestBtn.addEventListener('click', function () {
+    modal.style.display = 'flex';
+  });
+
+  // Close modal when clicking cancel
+  cancelBtn.addEventListener('click', function () {
+    modal.style.display = 'none';
+  });
+
+  // Agree → open test page
+  agreeBtn.addEventListener('click', function () {
+    const testPageContent =`
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Physical Fitness Tests</title>
+        <style>
+          body { font-family: Arial, sans-serif; background: #f0f4f8; margin: 0; padding: 2rem; }
+          h2 { text-align: center; color: #1a4d8f; margin-bottom: 2rem; }
+          .tests-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+          .test-card { background: #fff; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); overflow: hidden; }
+          .video-box { background: linear-gradient(135deg,#1a4d8f,#007bff); color: white; padding: 1rem; text-align: center; }
+          .video-box video { width: 100%; height: 180px; background: #000; border-radius: 6px; }
+          .video-box h3 { margin: 0.75rem 0 0.25rem; }
+          .instructions { padding: 1rem; background: #f9fafb; }
+          .instructions h4 { margin-bottom: 0.5rem; color: #1a4d8f; }
+          .instructions ol { margin: 0; padding-left: 1.2rem; }
+          .submit-btn { display: block; margin: 2rem auto 0; padding: 0.75rem 2rem; background: #1a4d8f; color: white; border-radius: 8px; cursor: pointer; font-weight: 600; }
+          .submit-btn:hover { background: #0f2f5f; }
+        </style>
+      </head>
+      <body>
+        <h2>KHELSETU PHYSICAL TEST</h2>
+        <div class="tests-grid">
+
+          <!-- push up Test -->
+          <div class="test-card">
+            <div class="video-box">
+              <video controls>
+<source src ="videos/Push_ups.mp4" type="video/mp4"> 
+              </video>
+              <h3>Push up Test</h3>
+              <p>Push up Test Demonstration Video</p>
+            </div>
+            <div class="instructions">
+              <h4>Instructions</h4>
+              <ol>
+                <li>Wear sports shoes during the test</li>
+                <li>Perform on a flat, non-slippery surface</li>
+                <li>Keep your phone/device at the recommended angle for proper tracking.</li>
+                <li>Maintain correct posture – body straight, arms shoulder-width apart.</li>
+              
+              </ol>
+            </div>
+          </div>
+
+          <!--  SITUPS Test -->
+          <div class="test-card">
+            <div class="video-box">
+              <video controls> <source src="videos/Sit_ups.mp4" type="video/mp4">
+              </video>
+              <h3>Sit-ups</h3>
+              <p>Sit-ups Test Demonstration Video</p>
+            </div>
+            <div class="instructions">
+              <h4>Instructions</h4>
+              <ol>
+                <li>Wear sports shoes for stability.</li>
+                <li>Ensure your clothes are fitted (not too loose) so tracking sensors work correctly.</li>
+                <li>Keep hands positioned correctly behind your head or crossed on your chest as instructed in the app</li>
+                
+              </ol>
+            </div>
+          </div>
+
+          <!-- bmi Test -->
+          <div class="test-card">
+            <div class="video-box">
+              <video controls>
+<source src="videos/B_M_I.mp4" type="video/mp4">
+              </video>
+              <h3>BMI Test</h3>
+              <p>BMI Test Demonstration Video</p>
+            </div>
+            <div class="instructions">
+              <h4>Instructions</h4>
+              <ol>
+                <li>Perform BMI measurement barefoot.</li>
+                <li>Stand on a plain, hard surface.</li>
+                <li>Wear light or fitted clothing for accurate results.</li>
+                <li>Height should be measured standing straight and still without streching your heel up.</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- running Test -->
+          <div class="test-card">
+            <div class="video-box">
+              <video controls>
+<source src="videos/Shuttle_run.mp4" type="video/mp4">
+              </video>
+              <h3>Shuttle Run Test</h3>
+              <p>Shuttle Run Test Demonstration Video</p>
+            </div>
+            <div class="instructions">
+              <h4>Instructions</h4>
+              <ol>
+                <li>First measure the distance from the back camera from initial to final point .</li>
+                <li>Perform in an open ground ,track area (minimum recommended length as per app instructions).</li>
+                <li>Wear running shoes for grip and safety.</li>
+                <li>Ensure the path is clear of obstacles.</li>
+                <li>Place your device properly (as instructed in the app) for accurate timing and tracking.</li>
+
+
+
+              </ol>
+            </div>
+          </div>
+
+        </div>
+             
+
+        <button class="submit-btn" onclick="if(confirm('Do you want to view your Khelsetu Score Card?')) { window.open('score.html', '_blank'); }">
+  Submit Test
+</button>
+
+
+
+
+      </body>
+      </html>
+    `;
+
+        const testWindow = window.open('', '_blank');
+  testWindow.document.open();
+  testWindow.document.write(testPageContent);ss
+  testWindow.document.close();
+  modal.style.display = 'none';
+});
+
+  window.addEventListener('click', function (event) {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
